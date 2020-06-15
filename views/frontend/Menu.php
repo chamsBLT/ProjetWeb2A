@@ -25,6 +25,11 @@ include('../../db.php');
 	<link rel="stylesheet" href="vendors/animate-css/animate.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.the-products{
+			background-color: black;
+		}
+	</style>
 </head>
 
 <body>

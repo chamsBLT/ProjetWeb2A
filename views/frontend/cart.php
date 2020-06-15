@@ -41,6 +41,24 @@ a.PO:link, a.PO:visited {
 a.PO:hover, a.PO:active {
   background-color: red;
 }
+ input[type=submit]{
+  background-color: #FF5733;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ input[type=button]{
+  background-color: #FF5733;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>

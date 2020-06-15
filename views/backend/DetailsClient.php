@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #FF5733;
+  color: white;
+}
+ input[type=submit] {
+  background-color: #FF5733;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>	
 </head>
 <body>
 	<form>
@@ -19,24 +45,18 @@ $sth= $con->prepare("SELECT c.name ,c.email,c.tel,c.adress FROM client c JOIN fi
 		?>
 		<br>
 		<table>
-			<td>Nom et Prenom :</td>
-            <td>Email :</td>
-            <td>Tel :</td>
-            <td>Adress :</td>
+			<th>Nom et Prenom :</th>
+            <th>Email :</th>
+            <th>Tel :</th>
+            <th>Adress :</th>
             </tr>
 			<tr>
 				<td><?php echo $row->name; ?></td>
 				<td><?php echo $row->email; ?></td>
 				<td><?php echo $row->tel; ?></td>
-				<td><?php echo $row->adress; ?></td>
-				
-
-            
+				<td><?php echo $row->adress; ?></td>           
           </td>
-	                 
-	
-	
-	
+	 	
 			</tr>
 		</table>
 <?php

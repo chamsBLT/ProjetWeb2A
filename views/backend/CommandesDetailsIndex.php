@@ -2,13 +2,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #FF5733;
+  color: white;
+}
+input[type=submit] {
+  background-color: #FF5733;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.DsC {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.Dsc:hover {
+  background-color: #f44336;
+  color: white;
+}
+input[type=text] {
+	padding: 10px 32px;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+.rcommande{font-size: 150%;}
+</style>
 </head>
 <body>
 	<form method="post">
-		<label>Chercher</label>
+		<label class="rcommande">Chercher par numero de commande : </label>
 		<input type="text" name="search" >
-		<input type="submit" name="submit">
+		<input type="submit" name="submit" value="Chercher">
 
 	</form>
 
@@ -29,7 +71,7 @@ if (isset($_POST['submit'])) {
 			<tr>
 				<th>Détails du commande :</th>
 				<th>Date et heure :</th>
-				<th><button onclick="displayIframe()">Click me</button></th>
+				<th><button class="button DsC" onclick="displayIframe()">Détails sur client</button></th>
 			</tr>
 			<tr>
 				<td><?php echo $row->details; ?></td>
@@ -40,7 +82,7 @@ if (isset($_POST['submit'])) {
 
             <script>
              function displayIframe() {
-              document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"DetailsClient.php\" height=\"90\" width=\"700\" \"border:none\" ></iframe>";
+              document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"DetailsClient.php\" height=\"150\" width=\"700\" \"border:none\" ></iframe>";
 
               }
               </script></div>
