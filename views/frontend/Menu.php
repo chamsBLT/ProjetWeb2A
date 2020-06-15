@@ -27,7 +27,9 @@ include('../../db.php');
 	<link rel="stylesheet" href="css/style.css">
 	<style>
 		.the-products{
-			background-color: black;
+			background-image: url("menuimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 		}
 	</style>
 </head>
