@@ -75,6 +75,6 @@ $sth= $con->prepare("SELECT c.name ,c.email,c.tel,c.adress FROM client c JOIN fi
 <?php
 	}
 
-	
+ 
 
 ?>
