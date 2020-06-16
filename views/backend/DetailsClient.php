@@ -54,7 +54,8 @@ $sth= $con->prepare("SELECT c.name ,c.email,c.tel,c.adress FROM client c JOIN fi
 				<td><?php echo $row->name; ?></td>
 				<td><?php echo $row->email; ?></td>
 				<td><?php echo $row->tel; ?></td>
-				<td><?php echo $row->adress; ?></td>           
+				<td><?php echo $row->adress; ?></td>
+				<td><a href="test2.php" target="_blank" onClick="window.open('test2.php','pagename','resizable,height=350,width=220'); return false;">Contacter</a></td>        
           </td>
 	 	
 			</tr>
