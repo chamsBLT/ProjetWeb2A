@@ -27,6 +27,18 @@ th {
   margin: 4px 2px;
   cursor: pointer;
 }
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
 </style>	
 </head>
 <body>
@@ -55,7 +67,7 @@ $sth= $con->prepare("SELECT c.name ,c.email,c.tel,c.adress FROM client c JOIN fi
 				<td><?php echo $row->email; ?></td>
 				<td><?php echo $row->tel; ?></td>
 				<td><?php echo $row->adress; ?></td>
-				<td><a href="test2.php" target="_blank" onClick="window.open('test2.php','pagename','resizable,height=350,width=220'); return false;">Contacter</a></td>        
+				<td><a href="test2.php" target="_blank" onClick="window.open('mailing.php','pagename','resizable,height=360,width=220'); return false;">Contacter</a></td>        
           </td>
 	 	
 			</tr>

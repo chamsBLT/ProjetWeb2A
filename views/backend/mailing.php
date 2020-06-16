@@ -51,25 +51,22 @@
 
       $mail = new PHPMailer;
 
-     //$mail->SMTPDebug = 4;                               // Enable verbose debug output
+     //$mail->SMTPDebug = 4;                               
 
-      $mail->isSMTP();                                      // Set mailer to use SMTP
-      $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-      $mail->SMTPAuth = true;                               // Enable SMTP authentication
-      $mail->Username = EMAIL;                 // SMTP username
-      $mail->Password = PASS;                           // SMTP password
-      $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-      $mail->Port = 25;                                    // TCP port to connect to
+      $mail->isSMTP();                                      
+      $mail->Host = 'smtp.gmail.com';  
+      $mail->SMTPAuth = true;                               
+      $mail->Username = EMAIL;                 
+      $mail->Password = PASS;                           
+      $mail->SMTPSecure = 'tls';                           
+      $mail->Port = 25;                                    
 
       $mail->setFrom(EMAIL, 'Dsmart Tutorials');
-      $mail->addAddress($_POST['email']);     // Add a recipient
+      $mail->addAddress($_POST['email']);     
 
       $mail->addReplyTo(EMAIL);
-      // print_r($_FILES['file']); exit;
-      //for ($i=0; $i < count($_FILES['file']['tmp_name']) ; $i++) { 
-        //$mail->addAttachment($_FILES['file']['tmp_name'][$i], $_FILES['file']['name'][$i]);    // Optional name
-      //}
-      $mail->isHTML(true);                                  // Set email format to HTML
+      
+      $mail->isHTML(true);                                  
 
       $mail->Subject = $_POST['subject'];
       $mail->Body    = '<div style="border:2px solid red;">This is the HTML message body <b>in bold!</b></div>';
